@@ -1,8 +1,58 @@
 // Selectors
-const todoInput = document.querySelector('.todo-input');
-const todoButton = document.querySelector('.todo-button');
-const todoList = document.querySelector('.todo-list');
-const filterOption = document.querySelector('.filter-todo');
+const appElement = document.querySelector('#app');
+
+/* <form>
+    <input class="todo-input" type="text" />
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div> */
+// UI
+const todoForm = document.createElement('form');
+const todoInput = document.createElement('input');
+todoInput.classList.add('todo-input');
+todoInput.type = 'text';
+todoForm.appendChild(todoInput);
+const todoButton = document.createElement('button');
+todoButton.classList.add('todo-button');
+todoButton.innerHTML = '<i class="fas fa-plus-square"></i>';
+todoForm.appendChild(todoButton);
+const todoSelect = document.createElement('div');
+todoSelect.classList.add('select');
+const filterOption = document.createElement('select');
+filterOption.name = 'todos';
+filterOption.classList.add('filter-todo');
+todoSelect.appendChild(filterOption);
+todoForm.appendChild(todoSelect);
+const todoFirstOpt = document.createElement('option');
+todoFirstOpt.value = 'all';
+todoFirstOpt.text = 'All';
+filterOption.appendChild(todoFirstOpt);
+const todoSecondOpt = document.createElement('option');
+todoSecondOpt.value = 'completed';
+todoSecondOpt.text = 'Completed';
+filterOption.appendChild(todoSecondOpt);
+const todoThirdOpt = document.createElement('option');
+todoThirdOpt.value = 'uncompleted';
+todoThirdOpt.text = 'Uncompleted';
+filterOption.appendChild(todoThirdOpt);
+const todoContainer = document.createElement('div');
+todoContainer.classList.add('todo-container');
+const todoList = document.createElement('ul');
+todoList.classList.add('todo-list');
+todoContainer.appendChild(todoList);
+appElement.appendChild(todoForm);
+appElement.appendChild(todoContainer);
 
 // Functions
 function saveLocalTodos(todo) {

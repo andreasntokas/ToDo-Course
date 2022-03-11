@@ -1,23 +1,5 @@
-// Selectors
+// UI - Recreated the DOM dynamically
 const appElement = document.querySelector('#app');
-
-/* <form>
-    <input class="todo-input" type="text" />
-      <button class="todo-button" type="submit">
-        <i class="fas fa-plus-square"></i>
-      </button>
-      <div class="select">
-        <select name="todos" class="filter-todo">
-          <option value="all">All</option>
-          <option value="completed">Completed</option>
-          <option value="uncompleted">Uncompleted</option>
-        </select>
-      </div>
-    </form>
-    <div class="todo-container">
-      <ul class="todo-list"></ul>
-    </div> */
-// UI
 const todoForm = document.createElement('form');
 const todoInput = document.createElement('input');
 todoInput.classList.add('todo-input');

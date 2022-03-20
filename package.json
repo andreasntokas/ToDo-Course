@@ -2,9 +2,10 @@
   "name": "todo-course",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.4.0"
+    "eslint-config-prettier": "^8.4.0",
+    "parcel": "^2.3.2"
   }
 }
